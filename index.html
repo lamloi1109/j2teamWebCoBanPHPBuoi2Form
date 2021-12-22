@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Đăng ký thành viên</h1>
+    <div class="form">
+        <form action="./xuly_form.php" name="myForm" id="myForm"  onsubmit="return validateForm()" method="post">
+            <!-- tk & mk -->
+            <div class="form__group">
+                <div class="form__group-title">
+                    <label for="uname">Tài khoản</label>
+                </div>
+                <div class="form__group-input">
+                    <input type="text" placeholder="Vui lòng nhập tài khoản" name="uname" id="uname">
+                </div>
+                <div class="form__group-error"></div>
+            </div>
+            <div class="form__group">
+                <div class="form__group-title">
+                    <label for="passwd">Mật khẩu</label>
+                </div>
+                <div class="form__group-input">
+                    <input type="password" name="passwd" id="passwd" placeholder="Vui lòng nhập mật khẩu">
+                </div>
+                <div class="form__group-error"></div>
+            </div>
+            <div class="form__group">
+                <div class="form__group-title">
+                    <label for="repasswd">Nhập lại mật khẩu</label>
+                </div>
+                <div class="form__group-input">
+                    <input type="password" name="repasswd" id="repasswd" placeholder="Vui lòng nhập lại mật khẩu">
+                </div>
+                <div class="form__group-error"></div>
+            </div>
+            <!-- Thông tin cá nhân -->
+            <div class="form__group">
+                <div class="form__group-title">
+                    <label for="fname">Ngày sinh</label>
+                </div>
+                <div class="form__group-input">
+                    <input type="date" name="bthday" id="bthday">
+                </div>
+                <div class="form__group-error"></div>
+            </div>
+            <div class="form__group">
+                <div class="form__group-title">
+                    <label for="gender">Giới tính</label>
+                </div>
+                <div class="form__group-gender">
+                    <input type="radio" name="gender" id="gender" checked value="1">
+                    <span>Nam</span>
+                </div>
+                <div class="form__group-gender">
+                    <input type="radio" name="gender" id="gender" value="0">
+                    <span>Nữ</span>
+                </div>
+                <div class="form__group-error"></div>
+            </div>
+            <div class="form__group">
+                <div class="form__group-title">
+                    <label for="address">Đia chỉ</label>
+                </div>
+                <div class="form__group-input">
+                    <input type="text" placeholder="Vui lòng nhập địa chỉ" name="address" id="address">
+                </div>
+                <div class="form__group-error"></div>
+            </div>
+            <div class="form__group">
+                <div class="form__group-title">
+                    <label for="email">Email</label>
+                </div>
+                <div class="form__group-input">
+                    <input type="email" name="email" id="email" placeholder="Vui lòng nhập email">
+                </div>
+                <div class="form__group-error"></div>
+            </div>
+            <div class="form__group">
+                <div class="form__group-title">
+                    <label for="interest">Sở thích</label>
+                </div>
+                <div class="form__group-interests">
+                    <input type="checkbox" name="interest[]" class="interest" value="Nghe nhac">
+                    <span>Nghe nhạc</span>
+                </div>
+                <div class="form__group-interests">
+                    <input type="checkbox" name="interest[]" class="interest" value="Xem phim">
+                    <span>Xem phim</span>
+                </div>
+                <div class="form__group-interests">
+                    <input type="checkbox" name="interest[]" class="interest" value="Doc sach">
+                    <span>Đọc sách</span>
+                </div>
+                <div class="form__group-interests">
+                    <input type="checkbox" name="interest[]" class="interest" value="Nghe podcast">
+                    <span>Nghe podcast</span>
+                </div>
+                <div class="form__group-error"></div>
+            </div>
+            <div class="form__group">
+                <div class="form__group-btn">
+                    <button type="submit">Đăng ký</button>
+                    <button type="reset">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
